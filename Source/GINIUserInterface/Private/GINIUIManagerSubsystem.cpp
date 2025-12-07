@@ -4,7 +4,6 @@
 #include "GINIUIManagerSubsystem.h"
 
 #include "GINIUIPolicy.h"
-#include "Developer/ShaderCompilerCommon/Private/HlslLexer.h"
 #include "GameFramework/HUD.h"
 #include "Settings/GINIUISettings.h"
 
@@ -25,8 +24,6 @@ void UGINIUIManagerSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	{
 		return;
 	}
-
-
 	
 	TSubclassOf<UGINIUIPolicy> UIPolicyClass = DefaultUIPolicy.LoadSynchronous();
 	SwitchToPolicy(NewObject<UGINIUIPolicy>(this, UIPolicyClass));
